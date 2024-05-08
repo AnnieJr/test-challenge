@@ -15,5 +15,18 @@ const getUser = (id) => {
 // test
 // console.log(getUser(3));
 
-module.exports = { getUsers, getUser };
+const api = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const user = getUser(id);
+      if (user) {
+        resolve(user);
+      } else {
+        reject(new Error("Usuario no encontrado"))
+      }
+    }, 2000);
+  })
+}
+
+module.exports = { getUsers, getUser, api };
 
