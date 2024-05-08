@@ -1,4 +1,4 @@
-// You already have the methods imported
+//// You already have the methods imported
 import { default as expect } from "expect";
 import { getUser, getUsers } from "../users";
 
